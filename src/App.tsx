@@ -6,6 +6,13 @@ import Contact from './Componts/Contact';
 import ContactList from './Componts/ContactList';
 import Staus from './Componts/Staus';
 import Heading from './Componts/Heading';
+import Oscar from './Componts/Oscar';
+import Button from './Componts/Button';
+import Input from './Componts/Input';
+import Style from './Componts/Style';
+import IsLogin from './State/isLogin';
+import User from './State/User';
+import Counter from './State/Counter'
 
 function App() {
   const contactName= {
@@ -40,9 +47,18 @@ function App() {
       </header> */}
       <Greet name="rahu" age ={24} isLogin={true} />
       <Contact name={contactName} />
-      <ContactList name={nameDetails} />
+      {/* <ContactList name={nameDetails} /> */}
       <Staus status='Success'/>
-      <Heading>Text</Heading>
+      <Oscar>
+      <Heading Children="ram"></Heading>
+      </Oscar>
+      <Button handleClick={(event,id) => {
+                  console.log('Button is clicked',event,id)}} />
+      <Input value='' handleChange={(event)=>{ console.log('The event is',event)}} />
+      <Style />
+      <IsLogin />
+      <User />
+      <Counter />
     </div>
   );
 }

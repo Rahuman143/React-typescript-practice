@@ -1,16 +1,21 @@
+import { Name } from "./Person.types"
+
+// type contactListProps = {
+//     name : {
+//     firstName: string,
+//     lastName: string
+//     }[]
+// }
 type contactListProps = {
-    name : {
-    firstName: string,
-    lastName: string
-    }[]
+    name : Name[]
 }
 const ContactList= (props : contactListProps) =>{
     return (
         <>
-        {props.name.map(names => {
+        {props.name.map((names) => {
         return (
-            <h2 key={names.firstName}>
-                {names.firstName} {names.lastName}
+            <h2 key={names.first}>
+                {names.first} {names.last}
             </h2>
         )
         })}
